@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Registration.Login" />
-        <activity android:name=".Registration.Registration"></activity>
+        <activity android:name=".Registration.Registration"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

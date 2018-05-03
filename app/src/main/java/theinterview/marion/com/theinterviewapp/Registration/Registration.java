@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -92,9 +91,11 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                 if (task.isSuccessful()){
                     //user is registered
                     Toast.makeText(Registration.this,"Registered successfully",Toast.LENGTH_LONG).show();
+                    progressDialog.dismiss();
                 }
                 else {
                     Toast.makeText(Registration.this,"Failed to Register..please try again",Toast.LENGTH_LONG).show();
+                    progressDialog.dismiss();
                 }
             }
         });
