@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "550829332377",
+    "firebase_url": "https://theinterviewapp.firebaseio.com",
+    "project_id": "theinterviewapp",
+    "storage_bucket": "theinterviewapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550829332377:android:e14447be2be2e05b",
+        "android_client_info": {
+          "package_name": "theinterview.marion.com.theinterviewapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550829332377-jq9gone9chdhscrnjo3o2umk41csu2r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCrxNO24REob0GC3it9pedOQnirj6f5-A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
