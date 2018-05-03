@@ -1,6 +1,7 @@
 package theinterview.marion.com.theinterviewapp.Registration;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import theinterview.marion.com.theinterviewapp.MainActivity;
 import theinterview.marion.com.theinterviewapp.R;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener {
@@ -33,6 +35,14 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        /*
+        if (firebaseAuth.getCurrentUser()!=null){
+            //directly go the main view
+            finish();
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
+        */
 
         buttonRegister = findViewById(R.id.buttonRegister);
         editTextEmail = findViewById(R.id.editTextEmail);
@@ -90,13 +100,14 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     //user is registered
+                    finish();
                     Toast.makeText(Registration.this,"Registered successfully",Toast.LENGTH_LONG).show();
-                    progressDialog.dismiss();
+
                 }
                 else {
                     Toast.makeText(Registration.this,"Failed to Register..please try again",Toast.LENGTH_LONG).show();
-                    progressDialog.dismiss();
                 }
+                progressDialog.dismiss();
             }
         });
 
